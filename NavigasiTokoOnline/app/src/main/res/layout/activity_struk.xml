@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".Struk">
+
+    <RelativeLayout
+        android:id="@+id/checkOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check Out"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="30dp"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:background="#00ffff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkOut"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkOut">
+
+            <TextView
+                android:id="@+id/nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text="Nama"/>
+
+            <TextView
+                android:id="@+id/txtnama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/nama"
+                android:textSize="20dp"
+                android:text="Nama"
+                android:layout_marginLeft="24dp"/>
+
+            <TextView
+                android:id="@+id/telp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nama"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="No.Telp"/>
+
+            <TextView
+                android:id="@+id/txtTelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/telp"
+                android:layout_below="@+id/txtnama"
+                android:textSize="20dp"
+                android:text="No.Telp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/telp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Alamat"/>
+
+            <TextView
+                android:id="@+id/txtAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/alamat"
+                android:layout_below="@+id/telp"
+                android:textSize="20dp"
+                android:text="Alamat"
+                android:layout_marginLeft="10dp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/garis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="------------------------------------------------------------------------------------------------------"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lebel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/garis"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/namaProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:text="Product Name"/>
+
+        <TextView
+            android:id="@+id/txtNamaProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_below="@+id/namaProduct"
+            android:layout_marginTop="10dp"
+            android:text="Product Name"/>
+
+        <TextView
+            android:id="@+id/hargaProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/namaProduct"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/black"
+            android:text="Price"/>
+
+        <TextView
+            android:id="@+id/txtHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hargaProduct"
+            android:layout_toRightOf="@id/txtNamaProduct"
+            android:layout_weight="1"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Price"/>
+
+        <TextView
+            android:id="@+id/qytProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Qty"
+            android:layout_weight="1"
+            android:layout_toLeftOf="@+id/totProduct"/>
+
+        <TextView
+            android:id="@+id/txtQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qytProduct"
+            android:layout_toLeftOf="@+id/txtTotHarga"
+            android:layout_weight="1"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Qty"/>
+
+        <TextView
+            android:id="@+id/totProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_weight="1"
+            android:text="Total Harga"/>
+
+        <TextView
+            android:id="@+id/txtTotHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totProduct"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:text="Total Harga"/>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/baday"
+        android:layout_width="119dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="154dp"
+        android:layout_centerHorizontal="true"
+
+        android:elevation="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="630dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:text="Terimakasih"
+        android:textSize="12dp" />
+</RelativeLayout>
